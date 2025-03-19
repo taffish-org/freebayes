@@ -19,7 +19,7 @@ RUN git clone --recursive https://github.com/samtools/htslib.git && \
 RUN cd /root/ && git clone --recursive https://github.com/freebayes/freebayes.git && \
     cd /root/freebayes/ && meson build/ --buildtype release && \
     cp /root/freebayes/contrib/SeqLib/SeqLib/* /usr/include/ && \
-    cd /root/freebayes/build/ && ninja && ninja test \
+    cd /root/freebayes/build/ && ninja && ninja test && \
     cp /root/freebayes/build/freebayes    /usr/local/bin/ && \
     cp /root/freebayes/build/bamleftalign /usr/local/bin/
     
