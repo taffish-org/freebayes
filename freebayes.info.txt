@@ -1,0 +1,9 @@
+# <freebayes | KaiyuanHan | 2025-03-20>
+ARGS
+    <else>
+        freebayes --help
+    <main>
+        freebayes ::*APP-ARGS*::
+RUN
+    <container:taf-freebayes-v1.3.9:ghcr.io/taffish-org/freebayes:1.3.9>
+        ::*MAIN*::
